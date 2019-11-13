@@ -6,6 +6,7 @@ import * as sinon from "sinon"
 import { SinonSandbox } from "sinon"
 import { Project } from "./project-context"
 import { ProjectView } from "./project-view"
+// import * as react from "react"
 
 Enzyme.configure({ adapter: new React16Adapter() })
 
@@ -17,7 +18,12 @@ describe("<ProjectView />", function() {
 
 		let mockProject: Project | undefined
 
-		beforeEach(function() { mockProject = { name: "Mocked project name" } })
+		beforeEach(function() {
+			mockProject = {
+				description: "Mocked project description",
+				name: "Mocked project name"
+			}
+		})
 
 		afterEach(function() {
 			sinonSandbox.restore()
@@ -32,6 +38,17 @@ describe("<ProjectView />", function() {
 			expect(mockProject!.name).not.to.include("Mocked")
 			expect(mockProject!.name).to.include("New")
 		})
+
+		// ☝ Showcase for `useContext` (instead of `React.useContext`) does not work yet!
+		// it("initializes the project's description.", function() {
+		// 	sinonSandbox.stub(react, "useContext").returns(mockProject)
+		// 	const projectView = shallow(<ProjectView />)
+
+		// 	projectView.find("#set-project").simulate("click")
+
+		// 	expect(mockProject!.description).not.to.include("Mocked")
+		// 	expect(mockProject!.description).to.include("New")
+		// })
 
 	})
 

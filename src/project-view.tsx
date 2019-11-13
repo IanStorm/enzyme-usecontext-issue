@@ -1,10 +1,13 @@
 import React from "react"
 import { ProjectContext } from "./project-context"
+// import React, { useContext } from "react"
 
 export const ProjectView: () => JSX.Element = () => {
-	const project = React.useContext(ProjectContext)
+	const projectA = React.useContext(ProjectContext)
+	// const projectB = useContext(ProjectContext) // ☝ Showcase for `useContext` (instead of `React.useContext`) does not work yet!
 	const onClick = () => {
-		project.name = "New project name"
+		projectA.name = "New project name"
+		// projectB.description = "New project description"
 	}
 
 	return (
