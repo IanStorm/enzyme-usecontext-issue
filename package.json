@@ -1,0 +1,43 @@
+{
+  "name": "enzyme-usecontext-issue",
+  "version": "0.0.0",
+  "description": "Workaround showcase for testing a useContext-based React component via Enzyme.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha dist/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IanStorm/enzyme-usecontext-issue.git"
+  },
+  "keywords": [
+    "enzyme",
+    "javascript",
+    "mocha",
+    "react",
+    "reactjs",
+    "typescript"
+  ],
+  "author": "Christian Sporer (https://github.com/IanStorm)",
+  "license": "MIT",
+  "dependencies": {
+    "react": "16.11.0",
+    "react-dom": "16.11.0"
+  },
+  "devDependencies": {
+    "@types/chai": "4.2.5",
+    "@types/enzyme": "3.10.3",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/mocha": "5.2.7",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.4",
+    "@types/sinon": "7.5.0",
+    "chai": "4.2.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.15.1",
+    "mocha": "6.2.2",
+    "sinon": "7.5.0",
+    "typescript": "3.7.2"
+  }
+}
